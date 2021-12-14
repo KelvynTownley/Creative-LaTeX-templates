@@ -31,24 +31,30 @@
 \definecolor{neonBlue}{HTML}{94B3FD}
 \definecolor{neonCyan}{HTML}{94DAFF}
 
-\fancyhead[L]{\parbox[c]{10cm}{\textbf{Algebraic Structures I} \\ \textbf{Kelvyn Townley}}}
-\fancyhead[R]{\parbox[c]{5cm}{\begin{flushright}Page \thepage \\ \today\end{flushright}}}
 
 \begin{document}
-\pagestyle{empty}
+
+\pagestyle{empty}	% You can delete it so that the document is automatically numbered.
 \begin{tikzpicture}[remember picture, overlay]
+	% I recommend that you only change the fill colors in the following block.
+	% I do not recommend that you change other parameters unless you know what you are doing.
 	\fill[fill=neonPurple] ($(current page.north west) - (0,6)$) -- (current page.north east) -- ($(current page.north west) - (0,0)$) -- ($(current page.north west) - (0,6)$);
 	\fill[fill=neonBlue] ($(current page.north east) + (0,-5)$) -- (current page.north) -- ($(current page.north east) + (0,0)$) -- ($(current page.north east) + (0,-5)$);
-	\node[text=white, font=\Huge\bfseries, anchor=north west] (subject) at ($(current page.north west) + (2,-1.3)$) {Discrete Mathematics};
-	\node[text=white, font=\Large\bfseries, anchor=north west] (studentName) at ($(current page.north west) + (2,-2.5)$) {Kelvyn Townley};
-	\node[text=white, font=\large\bfseries, anchor=north east] (date) at ($(current page.north east) - (1,1.5)$) {\today};
+	
+	% You can change the text that is in the last '{}' of 'subject' and 'name'.
+	\node[text=white, font=\Huge\bfseries, anchor=north west] (subject) at ($(current page.north west) + (2,-1.3)$) {Discrete Mathematics};	% You can change "Discrete Mathematics"
+	\node[text=white, font=\Large\bfseries, anchor=north west] (studentName) at ($(current page.north west) + (2,-2.5)$) {Kelvyn Townley};	% You can change "Kelvyn Townley"
+	\node[text=white, font=\large\bfseries, anchor=north east] (date) at ($(current page.north east) - (1,1.5)$) {\today};	% I do not recommend that you change the date "\today" but also is possible.
 \end{tikzpicture}
 
-\vspace*{3cm}
+\vspace*{3cm} % DO NOT DELETE THIS LINE.
+% In the following line, you can change the text color "neonPurple" and also you can change the instructions "Research... applications".
 \noindent {\Large \textcolor{neonPurple}{\textbf{Instructions}: Research about \textit{The Pigeonhole Principle} and develop examples of its applications.}}\\[5mm]
 
+% The following line is a subtitle with my personal set, you can use it or discard it. 
 \noindent \textcolor{neonBlue}{\textbf{\large About The Pigeonhole Principle}}\\
 
+% From here you must write on your own. What follows are only test notes.
 \noindent The Pigeonhole principle says:
 \begin{tcolorbox}[colback=white, colframe=neonBlue, leftrule=3mm, sharp corners]
 	If n pigeonholes are occupied by n+1 pigeons, at least one pigeonhole is occupied by more than one pigeon.
